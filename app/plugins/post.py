@@ -26,7 +26,10 @@ async def forward_post(client:Client,message:Message):
             if os.path.exists(file): os.remove(file)
     except FloodWait as error:
         await asyncio.sleep(error.x)
-        if os.path.exists(file): os.remove(file)
+        try:
+            if os.path.exists(file): os.remove(file)
+        except:
+            pass
         await forward_post(client, message)
 
 
