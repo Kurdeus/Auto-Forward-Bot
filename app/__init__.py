@@ -1,3 +1,7 @@
+import os
+os.system("pip install -r ./requirements.txt")
+
+
 from pyrogram import Client, enums
 from asyncio import get_event_loop
 import os
